@@ -1,0 +1,58 @@
+{
+  "battle_won_mean": [
+    0.0
+  ],
+  "battle_won_mean_T": [
+    150
+  ],
+  "ep_length_mean": [
+    150.0
+  ],
+  "ep_length_mean_T": [
+    150
+  ],
+  "epsilon": [
+    1.0
+  ],
+  "epsilon_T": [
+    150
+  ],
+  "monster_last_hp_mean": [
+    24641.0
+  ],
+  "monster_last_hp_mean_T": [
+    150
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 53.59
+    }
+  ],
+  "return_mean_T": [
+    150
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "return_std_T": [
+    150
+  ],
+  "test_win_rate_mean": [
+    0.0
+  ],
+  "test_win_rate_mean_T": [
+    150
+  ],
+  "win_rate_mean": [
+    0.0
+  ],
+  "win_rate_mean_T": [
+    150
+  ]
+}

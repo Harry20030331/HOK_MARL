@@ -1,0 +1,373 @@
+{
+  "battle_won_mean": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "battle_won_mean_T": [
+    150,
+    1200,
+    2250,
+    3300,
+    4350,
+    5400,
+    6450,
+    7500,
+    8550,
+    9600
+  ],
+  "ep_length_mean": [
+    150.0,
+    150.0,
+    150.0,
+    150.0,
+    150.0,
+    150.0,
+    150.0,
+    150.0,
+    150.0,
+    150.0
+  ],
+  "ep_length_mean_T": [
+    150,
+    1200,
+    2250,
+    3300,
+    4350,
+    5400,
+    6450,
+    7500,
+    8550,
+    9600
+  ],
+  "episode": [
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    63
+  ],
+  "episode_T": [
+    1050,
+    2100,
+    3150,
+    4200,
+    5250,
+    6300,
+    7350,
+    8400,
+    9450
+  ],
+  "epsilon": [
+    1.0,
+    0.990025,
+    0.98005,
+    0.970075,
+    0.9601,
+    0.950125,
+    0.94015,
+    0.930175,
+    0.9202,
+    0.9102250000000001
+  ],
+  "epsilon_T": [
+    150,
+    1200,
+    2250,
+    3300,
+    4350,
+    5400,
+    6450,
+    7500,
+    8550,
+    9600
+  ],
+  "grad_norm": [
+    {
+      "py/reduce": [
+        {
+          "py/function": "torch._utils._rebuild_tensor_v2"
+        },
+        {
+          "py/tuple": [
+            {
+              "py/reduce": [
+                {
+                  "py/function": "torch.storage._load_from_bytes"
+                },
+                {
+                  "py/tuple": [
+                    {
+                      "py/b64": "gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAAAGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAAaW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3JhZ2UKcQFYDgAAADk0ODI3ODgwMjMzNTUycQJYAwAAAGNwdXEDSwFOdHEEUS6AAl1xAFgOAAAAOTQ4Mjc4ODAyMzM1NTJxAWEuAQAAAAAAAAAoZmJA"
+                    }
+                  ]
+                }
+              ]
+            },
+            0,
+            {
+              "py/tuple": []
+            },
+            {
+              "py/tuple": []
+            },
+            false,
+            {
+              "py/reduce": [
+                {
+                  "py/type": "collections.OrderedDict"
+                },
+                {
+                  "py/tuple": []
+                },
+                null,
+                null,
+                {
+                  "py/tuple": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grad_norm_T": [
+    9600
+  ],
+  "loss_td": [
+    14.636926651000977
+  ],
+  "loss_td_T": [
+    9600
+  ],
+  "monster_last_hp_mean": [
+    23569.0,
+    21294.571428571428,
+    25510.428571428572,
+    24780.571428571428,
+    22025.571428571428,
+    25063.428571428572,
+    26052.714285714286,
+    24978.285714285714,
+    25301.714285714286,
+    27720.0
+  ],
+  "monster_last_hp_mean_T": [
+    150,
+    1200,
+    2250,
+    3300,
+    4350,
+    5400,
+    6450,
+    7500,
+    8550,
+    9600
+  ],
+  "q_taken_mean": [
+    -0.022302385965983072
+  ],
+  "q_taken_mean_T": [
+    9600
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 64.31000000000002
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 6.975714285714299
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -13.328571428571406
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 12.884285714285719
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 2.2331343123888863e-14
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 8.360000000000005
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -6.201428571428569
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 3.4885714285714378
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -6.628571428571424
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -4.1742857142857135
+    }
+  ],
+  "return_mean_T": [
+    150,
+    1200,
+    2250,
+    3300,
+    4350,
+    5400,
+    6450,
+    7500,
+    8550,
+    9600
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 26.132161278034854
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 48.27534343402922
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 28.85295075632541
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 26.007391806396665
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 29.948022114514146
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 24.56926502102717
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 30.221384306278143
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 25.340239275322787
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 32.017800342551794
+    }
+  ],
+  "return_std_T": [
+    150,
+    1200,
+    2250,
+    3300,
+    4350,
+    5400,
+    6450,
+    7500,
+    8550,
+    9600
+  ],
+  "target_mean": [
+    0.22177166748046875
+  ],
+  "target_mean_T": [
+    9600
+  ],
+  "td_error_abs": [
+    14.636927083333333
+  ],
+  "td_error_abs_T": [
+    9600
+  ],
+  "test_win_rate_mean": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "test_win_rate_mean_T": [
+    150,
+    1200,
+    2250,
+    3300,
+    4350,
+    5400,
+    6450,
+    7500,
+    8550,
+    9600
+  ],
+  "win_rate_mean": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "win_rate_mean_T": [
+    150,
+    1200,
+    2250,
+    3300,
+    4350,
+    5400,
+    6450,
+    7500,
+    8550,
+    9600
+  ]
+}

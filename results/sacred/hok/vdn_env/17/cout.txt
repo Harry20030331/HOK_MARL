@@ -1,0 +1,981 @@
+[INFO 12:22:09] pymarl Running command 'my_main'
+[INFO 12:22:09] pymarl Started run with ID "17"
+[DEBUG 12:22:09] pymarl Starting Heartbeat
+[DEBUG 12:22:09] my_main Started
+[WARNING 12:22:09] my_main CUDA flag use_cuda was switched OFF automatically because no CUDA devices are available!
+[INFO 12:22:09] my_main Experiment Parameters:
+[INFO 12:22:09] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'add_value_last_step': True,
+    'agent': 'n_rnn',
+    'agent_output_type': 'q',
+    'batch_size': 64,
+    'batch_size_run': 1,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'env': 'hok',
+    'env_args': {   'map_name': 'hok',
+                    'seed': 563312918},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_embed': 64,
+    'label': 'default_label',
+    'learner': 'nq_learner',
+    'learner_log_interval': 1000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 1000,
+    'lr': 0.001,
+    'mac': 'n_mac',
+    'mixer': 'vdn',
+    'mixing_embed_dim': 32,
+    'name': 'vdn_env',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'optimizer': 'adam',
+    'q_lambda': False,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'episode',
+    'runner_log_interval': 1000,
+    'save_model': True,
+    'save_model_interval': 2000,
+    'save_replay': False,
+    'seed': 563312918,
+    't_max': 1000000,
+    'target_update_interval': 200,
+    'td_lambda': 0.6,
+    'test_greedy': True,
+    'test_interval': 1000,
+    'test_nepisode': 64,
+    'use_cuda': False,
+    'use_tensorboard': False}
+
+1
+[INFO 12:22:09] root Socket connect to gamecore: tcp://*:5558 ... Succeed
+Mixer Size: 
+0.0K
+[INFO 12:22:14] my_main Beginning training for 1000000 timesteps
+Cur runner t_env is : 0, max is 1000000, Cur episode is 0
+[INFO 12:22:14] root New episode game starting!
+[INFO 12:22:14] root Game reset ... New game id = vdn_env-hok-train-2024-06-12 12:22
+[DEBUG 12:22:14] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.3:3030
+[DEBUG 12:22:14] urllib3.connectionpool http://172.17.0.3:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[INFO 12:22:14] root Succeed to start Game using SGame.exe, new_game_req: {'game_id': 'vdn_env-hok-train-2024-06-12 12:22', 'ai_server_port': 5558, 'ugc_project_id': 400, 'ugc_level_name': 'PVE_1_1'}
+[DEBUG 12:22:14] root Nature client start_game time cost = 0.01263880729675293 s
+/home/ubuntu/HOK_MARL/src/components/episode_buffer.py:103: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at  ../torch/csrc/utils/tensor_new.cpp:204.)
+  v = th.tensor(v, dtype=dtype, device=self.device)
+当前帧:1,分别执行了哪些动作: tensor([11,  8,  2,  7,  5])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [4], StepNo = [2]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:2,分别执行了哪些动作: tensor([4, 2, 5, 3, 9])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [7], StepNo = [3]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:3,分别执行了哪些动作: tensor([ 1,  4, 11, 12, 12])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [10], StepNo = [4]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:4,分别执行了哪些动作: tensor([11,  9,  6, 12,  2])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [13], StepNo = [5]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:5,分别执行了哪些动作: tensor([ 3,  5,  6, 10,  9])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [16], StepNo = [6]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:6,分别执行了哪些动作: tensor([ 2,  0,  7, 10,  2])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [19], StepNo = [7]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:7,分别执行了哪些动作: tensor([ 4,  7, 11,  2,  9])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [22], StepNo = [8]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:8,分别执行了哪些动作: tensor([ 2,  1,  2, 10, 12])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [25], StepNo = [9]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:9,分别执行了哪些动作: tensor([ 9, 12,  4,  2, 12])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [28], StepNo = [10]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:10,分别执行了哪些动作: tensor([ 2,  2, 12,  3,  3])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [31], StepNo = [11]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:11,分别执行了哪些动作: tensor([ 2,  7,  3, 12,  3])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [34], StepNo = [12]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:12,分别执行了哪些动作: tensor([ 7, 10,  9, 11,  9])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [37], StepNo = [13]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:13,分别执行了哪些动作: tensor([ 1, 10,  0,  2,  6])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [40], StepNo = [14]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:14,分别执行了哪些动作: tensor([10,  3,  2, 12,  7])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [43], StepNo = [15]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:15,分别执行了哪些动作: tensor([12,  9,  9, 10,  9])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [46], StepNo = [16]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:16,分别执行了哪些动作: tensor([5, 8, 2, 0, 0])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [49], StepNo = [17]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:17,分别执行了哪些动作: tensor([10,  9, 10,  4, 12])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [52], StepNo = [18]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:18,分别执行了哪些动作: tensor([12,  0, 10,  3,  5])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [55], StepNo = [19]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:19,分别执行了哪些动作: tensor([ 2,  2, 11, 10,  2])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [58], StepNo = [20]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:20,分别执行了哪些动作: tensor([ 7, 11,  8,  9,  2])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [61], StepNo = [21]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:21,分别执行了哪些动作: tensor([12,  2,  8,  0,  4])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [64], StepNo = [22]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:22,分别执行了哪些动作: tensor([11,  6,  2, 12,  7])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [67], StepNo = [23]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:23,分别执行了哪些动作: tensor([ 9,  4, 10,  9,  2])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [70], StepNo = [24]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:24,分别执行了哪些动作: tensor([11,  3,  1, 11,  9])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [73], StepNo = [25]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:25,分别执行了哪些动作: tensor([ 0,  9,  4,  5, 12])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [76], StepNo = [26]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:26,分别执行了哪些动作: tensor([2, 1, 4, 9, 0])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [79], StepNo = [27]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:27,分别执行了哪些动作: tensor([ 6,  3,  4,  4, 11])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [82], StepNo = [28]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:28,分别执行了哪些动作: tensor([ 9,  4, 12,  1,  0])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [85], StepNo = [29]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:29,分别执行了哪些动作: tensor([10,  9,  5,  6,  5])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [88], StepNo = [30]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:30,分别执行了哪些动作: tensor([ 8,  9,  4,  9, 11])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [91], StepNo = [31]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:31,分别执行了哪些动作: tensor([11,  1,  0, 12,  3])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [94], StepNo = [32]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:32,分别执行了哪些动作: tensor([11,  8,  1,  4,  9])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [97], StepNo = [33]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 30000
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:33,分别执行了哪些动作: tensor([ 4,  4, 11, 11,  8])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [100], StepNo = [34]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 29869
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:34,分别执行了哪些动作: tensor([12,  9,  8, 11, 12])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [103], StepNo = [35]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 29869
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:35,分别执行了哪些动作: tensor([12, 10,  0,  2, 10])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [106], StepNo = [36]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 29869
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:36,分别执行了哪些动作: tensor([ 3,  1,  0, 12,  8])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [109], StepNo = [37]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 29869
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:37,分别执行了哪些动作: tensor([12, 12,  0,  3, 12])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [112], StepNo = [38]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 29869
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:38,分别执行了哪些动作: tensor([11,  9,  4, 11,  9])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [115], StepNo = [39]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 29869
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:39,分别执行了哪些动作: tensor([4, 8, 1, 8, 8])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [118], StepNo = [40]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 29869
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:40,分别执行了哪些动作: tensor([4, 9, 2, 9, 0])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [121], StepNo = [41]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 29869
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:41,分别执行了哪些动作: tensor([5, 4, 3, 3, 0])
+[DEBUG 12:22:16] root -------------------------------------------
+[DEBUG 12:22:16] root FrameNo = [124], StepNo = [42]
+[DEBUG 12:22:16] root Game Status = 4
+[DEBUG 12:22:16] root Monster HP = 29869
+[DEBUG 12:22:16] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:42,分别执行了哪些动作: tensor([11,  4, 10,  1, 10])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [127], StepNo = [43]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29869
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:43,分别执行了哪些动作: tensor([ 7, 12, 11, 10,  1])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [130], StepNo = [44]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29869
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:44,分别执行了哪些动作: tensor([ 7, 10,  2, 12,  2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [133], StepNo = [45]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29869
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:45,分别执行了哪些动作: tensor([ 7,  0,  7,  0, 12])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [136], StepNo = [46]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29869
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:46,分别执行了哪些动作: tensor([10,  8, 12, 12,  1])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [139], StepNo = [47]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29869
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:47,分别执行了哪些动作: tensor([ 6,  2,  3, 10,  9])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [142], StepNo = [48]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29869
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:48,分别执行了哪些动作: tensor([ 4,  9, 10, 12,  8])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [145], StepNo = [49]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 30000
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:49,分别执行了哪些动作: tensor([ 9,  2, 10,  1,  2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [148], StepNo = [50]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 30000
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:50,分别执行了哪些动作: tensor([ 5,  8,  3,  0, 11])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [151], StepNo = [51]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 30000
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:51,分别执行了哪些动作: tensor([ 5,  3,  9, 10,  4])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [154], StepNo = [52]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 30000
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:52,分别执行了哪些动作: tensor([7, 2, 1, 0, 0])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [157], StepNo = [53]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 30000
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:53,分别执行了哪些动作: tensor([ 1,  1,  6, 10, 10])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [160], StepNo = [54]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 30000
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:54,分别执行了哪些动作: tensor([ 7,  1, 10,  8,  6])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [163], StepNo = [55]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 30000
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:55,分别执行了哪些动作: tensor([11,  0, 10,  3, 10])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [166], StepNo = [56]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29679
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:56,分别执行了哪些动作: tensor([ 5,  8,  2, 12,  9])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [169], StepNo = [57]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29679
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:57,分别执行了哪些动作: tensor([9, 1, 3, 4, 1])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [172], StepNo = [58]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29679
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 7843, '5': 8185}
+当前帧:58,分别执行了哪些动作: tensor([ 9,  3,  9,  9, 11])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [175], StepNo = [59]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29679
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5298, '4': 7843, '5': 7901}
+当前帧:59,分别执行了哪些动作: tensor([ 9,  8,  4,  6, 11])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [178], StepNo = [60]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29679
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5298, '4': 7843, '5': 7901}
+当前帧:60,分别执行了哪些动作: tensor([ 7, 10,  5,  9,  2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [181], StepNo = [61]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29679
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5298, '4': 7843, '5': 7901}
+当前帧:61,分别执行了哪些动作: tensor([4, 8, 0, 0, 4])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [184], StepNo = [62]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29548
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4987, '4': 7548, '5': 7617}
+当前帧:62,分别执行了哪些动作: tensor([7, 9, 9, 8, 2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [187], StepNo = [63]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29373
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4987, '4': 7548, '5': 8070}
+当前帧:63,分别执行了哪些动作: tensor([1, 4, 3, 4, 9])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [190], StepNo = [64]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29373
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 7253, '5': 7786}
+当前帧:64,分别执行了哪些动作: tensor([ 8,  2, 11, 10,  8])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [193], StepNo = [65]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 29094
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 7253, '5': 7786}
+当前帧:65,分别执行了哪些动作: tensor([ 2,  8,  1, 12,  5])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [196], StepNo = [66]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 28781
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 7253, '5': 7786}
+当前帧:66,分别执行了哪些动作: tensor([ 2,  3, 10,  2,  9])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [199], StepNo = [67]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 28645
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 6958, '5': 7502}
+当前帧:67,分别执行了哪些动作: tensor([ 6,  4, 12,  8, 10])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [202], StepNo = [68]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 28645
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 6958, '5': 7502}
+当前帧:68,分别执行了哪些动作: tensor([0, 0, 1, 2, 3])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [205], StepNo = [69]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 28531
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 6958, '5': 7502}
+当前帧:69,分别执行了哪些动作: tensor([11,  2, 11,  1,  2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [208], StepNo = [70]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 28531
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 6663, '5': 7218}
+当前帧:70,分别执行了哪些动作: tensor([7, 9, 8, 1, 2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [211], StepNo = [71]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 28395
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 6663, '5': 7218}
+当前帧:71,分别执行了哪些动作: tensor([ 0,  0,  8,  1, 10])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [214], StepNo = [72]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 28395
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 6368, '5': 6934}
+当前帧:72,分别执行了哪些动作: tensor([12,  9,  9, 12, 10])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [217], StepNo = [73]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 28395
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 6368, '5': 6934}
+当前帧:73,分别执行了哪些动作: tensor([ 6,  8,  0, 11,  3])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [220], StepNo = [74]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 28395
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 6368, '5': 6934}
+当前帧:74,分别执行了哪些动作: tensor([10,  0,  2,  1,  3])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [223], StepNo = [75]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 28395
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 6073, '5': 6650}
+当前帧:75,分别执行了哪些动作: tensor([ 1,  5, 11, 12,  5])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [226], StepNo = [76]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 28213
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 6073, '5': 6650}
+当前帧:76,分别执行了哪些动作: tensor([ 9,  3,  1, 12,  8])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [229], StepNo = [77]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 28213
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 6151, '5': 6746}
+当前帧:77,分别执行了哪些动作: tensor([ 4, 11, 10, 11,  8])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [232], StepNo = [78]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 28073
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6746}
+当前帧:78,分别执行了哪些动作: tensor([9, 1, 8, 9, 8])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [235], StepNo = [79]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 27773
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6746}
+当前帧:79,分别执行了哪些动作: tensor([ 1,  8, 12,  3,  3])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [238], StepNo = [80]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 27773
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6746}
+当前帧:80,分别执行了哪些动作: tensor([ 7,  4,  2,  4, 11])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [241], StepNo = [81]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 27773
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6746}
+当前帧:81,分别执行了哪些动作: tensor([ 3,  0, 11,  5, 11])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [244], StepNo = [82]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 27773
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6746}
+当前帧:82,分别执行了哪些动作: tensor([11,  9,  2,  9,  9])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [247], StepNo = [83]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 27773
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6746}
+当前帧:83,分别执行了哪些动作: tensor([ 5, 11,  1,  0,  2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [250], StepNo = [84]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 27577
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6746}
+当前帧:84,分别执行了哪些动作: tensor([ 5,  6, 12,  0,  0])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [253], StepNo = [85]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 27577
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6746}
+当前帧:85,分别执行了哪些动作: tensor([9, 4, 6, 0, 4])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [256], StepNo = [86]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 27577
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6746}
+当前帧:86,分别执行了哪些动作: tensor([1, 9, 9, 6, 2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [259], StepNo = [87]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 27463
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6746}
+当前帧:87,分别执行了哪些动作: tensor([ 5,  2,  9, 11,  2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [262], StepNo = [88]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 27463
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6746}
+当前帧:88,分别执行了哪些动作: tensor([ 8, 10,  1,  2,  6])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [265], StepNo = [89]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 27196
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6746}
+当前帧:89,分别执行了哪些动作: tensor([ 4,  9,  5, 10, 12])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [268], StepNo = [90]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 27060
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6746}
+当前帧:90,分别执行了哪些动作: tensor([ 6,  1,  1, 11, 11])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [271], StepNo = [91]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 27060
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5856, '5': 6391}
+当前帧:91,分别执行了哪些动作: tensor([11,  1,  8,  0,  2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [274], StepNo = [92]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 26929
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5021, '4': 5856, '5': 6391}
+当前帧:92,分别执行了哪些动作: tensor([12,  7,  8,  0, 10])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [277], StepNo = [93]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 26611
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5021, '4': 5856, '5': 6391}
+当前帧:93,分别执行了哪些动作: tensor([12,  2, 12,  1,  2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [280], StepNo = [94]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 26611
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5021, '4': 5856, '5': 6391}
+当前帧:94,分别执行了哪些动作: tensor([ 7, 11,  9,  8, 10])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [283], StepNo = [95]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 26480
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5021, '4': 5856, '5': 6391}
+当前帧:95,分别执行了哪些动作: tensor([ 2,  9,  1, 11,  2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [286], StepNo = [96]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 26156
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5021, '4': 5856, '5': 6391}
+当前帧:96,分别执行了哪些动作: tensor([ 4, 10, 10, 10,  2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [289], StepNo = [97]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 26156
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5021, '4': 5856, '5': 6391}
+当前帧:97,分别执行了哪些动作: tensor([ 1,  1, 10, 11,  4])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [292], StepNo = [98]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 26156
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5021, '4': 5856, '5': 6391}
+当前帧:98,分别执行了哪些动作: tensor([11, 10,  1, 10,  5])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [295], StepNo = [99]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 25974
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5021, '4': 5856, '5': 6391}
+当前帧:99,分别执行了哪些动作: tensor([11,  4, 12,  4, 12])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [298], StepNo = [100]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 25974
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5021, '4': 5856, '5': 6391}
+当前帧:100,分别执行了哪些动作: tensor([ 0,  9,  2, 10,  1])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [301], StepNo = [101]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 25695
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5021, '4': 5856, '5': 6391}
+当前帧:101,分别执行了哪些动作: tensor([11,  1,  5,  9,  8])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [304], StepNo = [102]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 25581
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5092, '4': 5934, '5': 6487}
+当前帧:102,分别执行了哪些动作: tensor([12, 12, 11,  1,  9])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [307], StepNo = [103]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 25445
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5092, '4': 5934, '5': 5776}
+当前帧:103,分别执行了哪些动作: tensor([ 6,  3,  4,  8, 10])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [310], StepNo = [104]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 25314
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5092, '4': 5934, '5': 5776}
+当前帧:104,分别执行了哪些动作: tensor([ 6,  1, 10,  3,  3])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [313], StepNo = [105]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 25314
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5092, '4': 5934, '5': 5776}
+当前帧:105,分别执行了哪些动作: tensor([ 3, 12,  1,  1,  0])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [316], StepNo = [106]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 25314
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5092, '4': 5934, '5': 5776}
+当前帧:106,分别执行了哪些动作: tensor([ 6,  9,  9, 12, 12])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [319], StepNo = [107]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 25183
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5366, '4': 5934, '5': 5776}
+当前帧:107,分别执行了哪些动作: tensor([6, 0, 4, 2, 3])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [322], StepNo = [108]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 24865
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5366, '4': 5934, '5': 5776}
+当前帧:108,分别执行了哪些动作: tensor([4, 0, 9, 4, 1])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [325], StepNo = [109]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 24865
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5366, '4': 5934, '5': 5776}
+当前帧:109,分别执行了哪些动作: tensor([ 1,  8,  3, 11,  0])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [328], StepNo = [110]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 24753
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5366, '4': 5934, '5': 5776}
+当前帧:110,分别执行了哪些动作: tensor([6, 4, 0, 2, 3])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [331], StepNo = [111]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 24753
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5366, '4': 5934, '5': 5776}
+当前帧:111,分别执行了哪些动作: tensor([12, 11, 10,  9, 11])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [334], StepNo = [112]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 24674
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5366, '4': 5934, '5': 5776}
+当前帧:112,分别执行了哪些动作: tensor([ 7,  5,  9, 12,  1])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [337], StepNo = [113]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 24674
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5366, '4': 5934, '5': 5065}
+当前帧:113,分别执行了哪些动作: tensor([11,  1,  1,  0,  8])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [340], StepNo = [114]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 24538
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5366, '4': 5934, '5': 5065}
+当前帧:114,分别执行了哪些动作: tensor([3, 9, 6, 1, 8])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [343], StepNo = [115]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 24428
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5366, '4': 5934, '5': 5065}
+当前帧:115,分别执行了哪些动作: tensor([ 9, 11,  1,  1,  4])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [346], StepNo = [116]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 24297
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5366, '4': 5934, '5': 5065}
+当前帧:116,分别执行了哪些动作: tensor([10,  0, 12,  3,  8])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [349], StepNo = [117]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 24049
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5366, '4': 5934, '5': 5065}
+当前帧:117,分别执行了哪些动作: tensor([ 9,  9,  3, 12,  0])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [352], StepNo = [118]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23978
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 5934, '5': 5065}
+当前帧:118,分别执行了哪些动作: tensor([7, 8, 2, 0, 0])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [355], StepNo = [119]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23660
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 5934, '5': 5065}
+当前帧:119,分别执行了哪些动作: tensor([ 7,  0,  2, 11, 10])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [358], StepNo = [120]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23660
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5609, '4': 5934, '5': 5065}
+当前帧:120,分别执行了哪些动作: tensor([12, 11,  9,  2, 11])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [361], StepNo = [121]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23660
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5298, '4': 5639, '5': 4781}
+当前帧:121,分别执行了哪些动作: tensor([12,  0,  3, 12,  0])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [364], StepNo = [122]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23660
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5298, '4': 5639, '5': 4781}
+当前帧:122,分别执行了哪些动作: tensor([9, 9, 4, 2, 0])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [367], StepNo = [123]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23660
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 5298, '4': 5639, '5': 4781}
+当前帧:123,分别执行了哪些动作: tensor([ 0,  3,  1, 11,  6])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [370], StepNo = [124]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23314
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4987, '4': 5344, '5': 4497}
+当前帧:124,分别执行了哪些动作: tensor([11,  1,  8,  0,  8])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [373], StepNo = [125]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23314
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4987, '4': 5344, '5': 4497}
+当前帧:125,分别执行了哪些动作: tensor([12,  3, 10,  0,  2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [376], StepNo = [126]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23314
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4676, '4': 5049, '5': 4213}
+当前帧:126,分别执行了哪些动作: tensor([ 7,  2, 11,  6,  8])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [379], StepNo = [127]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23314
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5127, '5': 4309}
+当前帧:127,分别执行了哪些动作: tensor([3, 2, 4, 3, 2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [382], StepNo = [128]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23314
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4747, '4': 5127, '5': 4309}
+当前帧:128,分别执行了哪些动作: tensor([1, 0, 1, 1, 1])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [385], StepNo = [129]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23314
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4436, '4': 4832, '5': 4025}
+当前帧:129,分别执行了哪些动作: tensor([ 8,  8, 11,  3,  0])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [388], StepNo = [130]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23235
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4436, '4': 4832, '5': 4025}
+当前帧:130,分别执行了哪些动作: tensor([ 2,  3, 11, 12,  3])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [391], StepNo = [131]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23235
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4436, '4': 4832, '5': 4025}
+当前帧:131,分别执行了哪些动作: tensor([11,  9,  9,  3,  4])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [394], StepNo = [132]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23235
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4125, '4': 4537, '5': 3741}
+当前帧:132,分别执行了哪些动作: tensor([ 9,  0, 11, 12,  3])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [397], StepNo = [133]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23121
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 4125, '4': 4537, '5': 3741}
+当前帧:133,分别执行了哪些动作: tensor([3, 9, 0, 0, 2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [400], StepNo = [134]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 23121
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 3814, '4': 4242, '5': 3457}
+当前帧:134,分别执行了哪些动作: tensor([ 3,  3, 12,  0,  5])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [403], StepNo = [135]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 22939
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 3814, '4': 4242, '5': 3457}
+当前帧:135,分别执行了哪些动作: tensor([11, 12,  3,  0,  4])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [406], StepNo = [136]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 22939
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 3814, '4': 4242, '5': 3457}
+当前帧:136,分别执行了哪些动作: tensor([10,  1,  3, 10,  8])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [409], StepNo = [137]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 22939
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:137,分别执行了哪些动作: tensor([ 8,  3,  1, 11,  8])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [412], StepNo = [138]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 22825
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:138,分别执行了哪些动作: tensor([1, 0, 9, 9, 9])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [415], StepNo = [139]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 22825
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:139,分别执行了哪些动作: tensor([ 0,  1,  3, 10,  5])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [418], StepNo = [140]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 22643
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:140,分别执行了哪些动作: tensor([6, 9, 9, 5, 3])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [421], StepNo = [141]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 22643
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:141,分别执行了哪些动作: tensor([ 3, 11,  2,  0, 11])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [424], StepNo = [142]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 22643
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:142,分别执行了哪些动作: tensor([ 3,  1, 12,  8,  2])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [427], StepNo = [143]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 22529
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:143,分别执行了哪些动作: tensor([ 6,  1,  2, 10,  0])
+[DEBUG 12:22:17] root -------------------------------------------
+[DEBUG 12:22:17] root FrameNo = [430], StepNo = [144]
+[DEBUG 12:22:17] root Game Status = 4
+[DEBUG 12:22:17] root Monster HP = 22529
+[DEBUG 12:22:17] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:144,分别执行了哪些动作: tensor([ 4,  3,  0, 12, 12])
+[DEBUG 12:22:18] root -------------------------------------------
+[DEBUG 12:22:18] root FrameNo = [433], StepNo = [145]
+[DEBUG 12:22:18] root Game Status = 4
+[DEBUG 12:22:18] root Monster HP = 22529
+[DEBUG 12:22:18] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:145,分别执行了哪些动作: tensor([8, 3, 1, 3, 8])
+[DEBUG 12:22:18] root -------------------------------------------
+[DEBUG 12:22:18] root FrameNo = [436], StepNo = [146]
+[DEBUG 12:22:18] root Game Status = 4
+[DEBUG 12:22:18] root Monster HP = 22529
+[DEBUG 12:22:18] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:146,分别执行了哪些动作: tensor([11,  1, 12,  4,  3])
+[DEBUG 12:22:18] root -------------------------------------------
+[DEBUG 12:22:18] root FrameNo = [439], StepNo = [147]
+[DEBUG 12:22:18] root Game Status = 4
+[DEBUG 12:22:18] root Monster HP = 22529
+[DEBUG 12:22:18] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:147,分别执行了哪些动作: tensor([10,  3,  2,  3, 10])
+[DEBUG 12:22:18] root -------------------------------------------
+[DEBUG 12:22:18] root FrameNo = [442], StepNo = [148]
+[DEBUG 12:22:18] root Game Status = 4
+[DEBUG 12:22:18] root Monster HP = 22250
+[DEBUG 12:22:18] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:148,分别执行了哪些动作: tensor([10,  0,  3,  0,  5])
+[DEBUG 12:22:18] root -------------------------------------------
+[DEBUG 12:22:18] root FrameNo = [445], StepNo = [149]
+[DEBUG 12:22:18] root Game Status = 4
+[DEBUG 12:22:18] root Monster HP = 22068
+[DEBUG 12:22:18] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:149,分别执行了哪些动作: tensor([11,  1,  6, 10, 10])
+[DEBUG 12:22:18] root -------------------------------------------
+[DEBUG 12:22:18] root FrameNo = [448], StepNo = [150]
+[DEBUG 12:22:18] root Game Status = 4
+[DEBUG 12:22:18] root Monster HP = 22068
+[DEBUG 12:22:18] root Hero HP = {'1': 7738, '2': 5706, '3': 3503, '4': 3947, '5': 3173}
+当前帧:150,分别执行了哪些动作: tensor([11,  4, 11,  0,  1])
+[INFO 12:22:18] root ******* Game Over with status 3 *******
+[INFO 12:22:18] root 0: error, 1: win, 2: fail, 3: overtime
+[INFO 12:22:18] root FrameNo = [448], StepNo = [151], avg time = [0.0022148612319238927]
+[DEBUG 12:22:18] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.3:3030
+[DEBUG 12:22:18] urllib3.connectionpool http://172.17.0.3:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[INFO 12:22:18] root Succeed to stop Game using SGame.exe, stop_game_req: {'game_id': 'vdn_env-hok-train-2024-06-12 12:22', 'ai_server_port': 5558}
+/home/ubuntu/HOK_MARL/src/components/episode_buffer.py:103: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 12:22:18] my_main Saving models to results/models/vdn_env__2024-06-12_12-22-09/150

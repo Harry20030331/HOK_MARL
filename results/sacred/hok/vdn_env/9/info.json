@@ -1,0 +1,88 @@
+{
+  "battle_won_mean": [
+    0.0,
+    0.0
+  ],
+  "battle_won_mean_T": [
+    150,
+    1200
+  ],
+  "ep_length_mean": [
+    150.0,
+    150.0
+  ],
+  "ep_length_mean_T": [
+    150,
+    1200
+  ],
+  "episode": [
+    7
+  ],
+  "episode_T": [
+    1050
+  ],
+  "epsilon": [
+    1.0,
+    0.990025
+  ],
+  "epsilon_T": [
+    150,
+    1200
+  ],
+  "monster_last_hp_mean": [
+    21749.0,
+    24016.714285714286
+  ],
+  "monster_last_hp_mean_T": [
+    150,
+    1200
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 82.51
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": -6.269999999999984
+    }
+  ],
+  "return_mean_T": [
+    150,
+    1200
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    },
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 16.4756963867562
+    }
+  ],
+  "return_std_T": [
+    150,
+    1200
+  ],
+  "test_win_rate_mean": [
+    0.0,
+    0.0
+  ],
+  "test_win_rate_mean_T": [
+    150,
+    1200
+  ],
+  "win_rate_mean": [
+    0.0,
+    0.0
+  ],
+  "win_rate_mean_T": [
+    150,
+    1200
+  ]
+}
