@@ -1,6 +1,6 @@
 import copy
 from components.episode_buffer import EpisodeBatch
-from modules.mixers.qmix import Mixer
+from modules.mixers.nmix import Mixer
 from modules.mixers.vdn import VDNMixer
 from modules.mixers.qatten import QattenMixer
 from utils.rl_utils import build_td_lambda_targets, build_q_lambda_targets
