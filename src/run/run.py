@@ -75,8 +75,7 @@ def run(_run, _config, _log):
 def evaluate_sequential(args, runner):
     monster_hp_list=[]
 
-    # for _ in range(args.test_nepisode):
-    for _ in range(2):
+    for _ in range(args.test_nepisode):
         batch, env_info=runner.run(test_mode=True)
         monster_hp_list.append(env_info['monster_last_hp'])
 

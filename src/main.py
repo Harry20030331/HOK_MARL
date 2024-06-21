@@ -37,21 +37,28 @@ def my_main(_run, _config, _log):
     else:
         run_REGISTRY[_config['run']](_run, config, _log)
 
-def _get_config(params, arg_name, subfolder):
+def _get_config(params, arg_name, subfolder=None):
+    config_dict={}
     config_name = None
     for _i, _v in enumerate(params):
         if _v.split("=")[0] == arg_name:
             config_name = _v.split("=")[1]
+            try: 
+                config_name=int(config_name)
+            except:
+                pass
+            config_dict[arg_name.split("--")[1]] = config_name
             del params[_i]
             break
 
-    if config_name is not None:
+    if config_name is not None and subfolder is not None:
         with open(os.path.join(os.path.dirname(__file__), "config", subfolder, "{}.yaml".format(config_name)), "r") as f:
             try:
                 config_dict = yaml.load(f,Loader = yaml.FullLoader)
             except yaml.YAMLError as exc:
                 assert False, "{}.yaml error: {}".format(config_name, exc)
-        return config_dict
+
+    return config_dict
 
 
 def recursive_dict_update(d, u):
@@ -95,9 +102,15 @@ if __name__ == '__main__':
     # Load algorithm and env base configs
     env_config = _get_config(params, "--env-config", "envs")
     alg_config = _get_config(params, "--config", "algs")
+    # change default config
+    default_config_dict ={}
+    default_config_dict.update(_get_config(params, "--evaluate"))
+    default_config_dict.update(_get_config(params, "--checkpoint_path"))
+    default_config_dict.update(_get_config(params, "--test_nepisode"))
     # config_dict = {**config_dict, **env_config, **alg_config}
     config_dict = recursive_dict_update(config_dict, env_config)
     config_dict = recursive_dict_update(config_dict, alg_config)
+    config_dict = recursive_dict_update(config_dict, default_config_dict)
 
     # now add all the config to sacred
     ex.add_config(config_dict)
