@@ -118,7 +118,7 @@ class EpisodeRunner:
                         numbers.append(env_info['monster_last_hp'])
                     with open(monster_hp_json_file_path, 'w') as file:
                         file.write(str(numbers))
-            
+
         last_data = {
             "state": [self.env.get_state()],
             "avail_actions": [self.env.get_avail_actions()],

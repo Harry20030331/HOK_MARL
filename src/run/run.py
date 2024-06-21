@@ -2,6 +2,7 @@ import datetime
 import os
 import pprint
 import time
+import numpy as np
 import threading
 import torch as th
 from types import SimpleNamespace as SN
@@ -15,6 +16,8 @@ from controllers import REGISTRY as mac_REGISTRY
 from components.episode_buffer import ReplayBuffer
 from components.transforms import OneHot
 
+import sys
+sys.path.append(os.getcwd())
 # from smac.env import StarCraft2Env
 
 # def get_agent_own_state_size(env_args):
@@ -70,15 +73,21 @@ def run(_run, _config, _log):
 
 
 def evaluate_sequential(args, runner):
+    monster_hp_list=[]
 
     # for _ in range(args.test_nepisode):
-    for _ in range(3):
-        runner.run(test_mode=True)
+    for _ in range(2):
+        batch, env_info=runner.run(test_mode=True)
+        monster_hp_list.append(env_info['monster_last_hp'])
 
     if args.save_replay:
         runner.save_replay()
 
     runner.close_env()
+
+    print('=======================================================')
+    print("average monster HP:"+str(np.mean(np.array(monster_hp_list))))
+    print('=======================================================')
 
 def run_sequential(args, logger):
 
