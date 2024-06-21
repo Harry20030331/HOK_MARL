@@ -71,7 +71,8 @@ def run(_run, _config, _log):
 
 def evaluate_sequential(args, runner):
 
-    for _ in range(args.test_nepisode):
+    # for _ in range(args.test_nepisode):
+    for _ in range(3):
         runner.run(test_mode=True)
 
     if args.save_replay:

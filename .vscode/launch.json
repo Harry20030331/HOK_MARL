@@ -14,8 +14,8 @@
         "--config=vdn",
         "--env-config=hok",
         "with",
-        "env_args.map_name=hok"
-            ]
+        "env_args.map_name=hok",
+            ],
         }
     ]
 }

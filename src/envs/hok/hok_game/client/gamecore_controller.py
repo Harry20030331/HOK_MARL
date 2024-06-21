@@ -23,7 +23,8 @@ class GameCoreController:
         self.ugc_level_name = GC_CONFIG["level_name"]
         self.game_core_server_endpoint = GC_CONFIG["endpoint"]
         self.retry_times = GC_CONFIG["retry_times"]
-        self.retry_times_sleep_seconds = GC_CONFIG["retry_sleep_seconds"]
+        # self.retry_times_sleep_seconds = GC_CONFIG["retry_sleep_seconds"]
+        self.retry_times_sleep_seconds = 0
         self.logger = logger
 
     def start_game(self):
