@@ -579,7 +579,7 @@ class HokEnv(MultiAgentEnv, NatureClient):
             actions = _actions
 
         self._episode_steps+=1
-        print(f'当前帧:{self._episode_steps},分别执行了哪些动作: {_actions}')
+        # print(f'当前帧:{self._episode_steps},分别执行了哪些动作: {_actions}')
         # 开始每帧进行交互
         # ti总是代表当前时间 - 上一个记录节点
         ti = time.time() - self.start_point
