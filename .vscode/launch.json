@@ -11,7 +11,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
-        "--config=qtran",
+        "--config=vdn",
         "--env-config=hok",
         "with",
         "env_args.map_name=hok",
