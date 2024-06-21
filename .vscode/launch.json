@@ -11,9 +11,6 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
-        "--evaluate=true",
-        "--test_nepisode=10",
-        "--checkpoint_path=results/models/vdn_env__2024-06-12_11-34-32/150/",
         "--config=vdn",
         "--env-config=hok",
         "with",
