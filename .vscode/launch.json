@@ -11,7 +11,10 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
-        "--config=qatten",
+        "--evaluate=true",
+        "--checkpoint_path=results/models/qmix_env__2024-06-22_09-27-31/598650",
+        "--test_nepisode=20",
+        "--config=qmix",
         "--env-config=hok",
         "with",
         "env_args.map_name=hok",

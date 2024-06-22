@@ -23,7 +23,7 @@ agent: "n_rnn"
 agent_output_type: q
 
 learner: "nq_learner"
-mixer: "qmix"
+mixer: "nmix"
 mixing_embed_dim: 32
 hypernet_embed: 64
 lr: 0.001 # Learning rate for agents

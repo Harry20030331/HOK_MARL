@@ -1,0 +1,152 @@
+[INFO 14:13:04] pymarl Running command 'my_main'
+[INFO 14:13:04] pymarl Started run with ID "2"
+[DEBUG 14:13:04] pymarl Starting Heartbeat
+[DEBUG 14:13:04] my_main Started
+[WARNING 14:13:04] my_main CUDA flag use_cuda was switched OFF automatically because no CUDA devices are available!
+[INFO 14:13:04] my_main Experiment Parameters:
+[INFO 14:13:04] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'add_value_last_step': True,
+    'agent': 'n_rnn',
+    'agent_output_type': 'q',
+    'batch_size': 64,
+    'batch_size_run': 1,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'checkpoint_path': 'results/models/qmix_env__2024-06-22_09-27-31/598650',
+    'critic_lr': 0.0005,
+    'env': 'hok',
+    'env_args': {   'map_name': 'hok',
+                    'seed': 903205321},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': 'true',
+    'gain': 0.01,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_embed': 64,
+    'label': 'default_label',
+    'learner': 'nq_learner',
+    'learner_log_interval': 1000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 1000,
+    'lr': 0.001,
+    'mac': 'n_mac',
+    'mixer': 'qmix',
+    'mixing_embed_dim': 32,
+    'name': 'qmix_env',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'optimizer': 'adam',
+    'per_alpha': 0.6,
+    'per_beta': 0.4,
+    'q_lambda': False,
+    'repeat_id': 1,
+    'return_priority': False,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'episode',
+    'runner_log_interval': 1000,
+    'save_model': True,
+    'save_model_interval': 2000,
+    'save_replay': False,
+    'seed': 903205321,
+    't_max': 600000,
+    'target_update_interval': 200,
+    'td_lambda': 0.6,
+    'test_greedy': True,
+    'test_interval': 1000,
+    'test_nepisode': 20,
+    'use_cuda': False,
+    'use_layer_norm': False,
+    'use_orthogonal': False,
+    'use_per': False,
+    'use_tensorboard': True}
+
+1
+Mixer Size: 
+7.969K
+[INFO 14:13:05] my_main Loading model from results/models/qmix_env__2024-06-22_09-27-31/598650
+[DEBUG 14:13:05] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:05] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:08] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:08] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:08] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:08] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:12] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:12] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:12] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:12] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:14] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:14] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:14] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:14] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:18] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:18] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:18] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:18] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:21] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:21] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:21] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:21] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:24] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:24] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:24] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:24] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:27] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:27] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:27] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:27] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:29] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:29] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:29] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:29] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:33] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:33] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:33] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:33] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:36] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:36] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:36] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:36] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:39] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:39] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:39] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:39] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:42] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:42] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:42] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:42] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:45] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:45] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:45] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:45] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:48] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:48] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:48] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:48] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:51] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:51] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:51] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:51] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:54] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:54] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:54] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:54] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:13:57] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:57] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:13:57] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:13:57] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:14:00] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:14:00] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:14:00] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:14:00] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
+[DEBUG 14:14:03] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:14:03] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/stopGame HTTP/1.1" 200 0
+[DEBUG 14:14:03] urllib3.connectionpool Starting new HTTP connection (1): 172.17.0.2:3030
+[DEBUG 14:14:03] urllib3.connectionpool http://172.17.0.2:3030 "POST /ugc/newGame HTTP/1.1" 200 0
