@@ -57,7 +57,7 @@ class GameCoreController:
                 self.logger.error(f"start_game response code: {resp.status_code}, response content: {resp.content}")
                 return False
 
-            self.logger.info(f'Succeed to start Game using SGame.exe, new_game_req: {new_game_req}')
+            # self.logger.info(f'Succeed to start Game using SGame.exe, new_game_req: {new_game_req}')
             return True
 
         except Exception as ex:
@@ -91,7 +91,7 @@ class GameCoreController:
                 self.logger.error(f"stop_game response code: {resp.status_code}, response content: {resp.content}")
                 return False
 
-            self.logger.info(f'Succeed to stop Game using SGame.exe, stop_game_req: {stop_game_req}')
+            # self.logger.info(f'Succeed to stop Game using SGame.exe, stop_game_req: {stop_game_req}')
             return True
 
         except Exception as ex:

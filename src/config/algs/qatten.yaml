@@ -11,7 +11,7 @@ batch_size_run: 1
 buffer_size: 5000
 batch_size: 64
 
-t_max: 1000000
+t_max: 700000
 
 # update the target network every {} episodes
 target_update_interval: 200

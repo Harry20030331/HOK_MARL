@@ -142,7 +142,7 @@ class HokEnv(MultiAgentEnv, NatureClient):
         else:
             self.game_id = f"{args.name}-hok-train-{cur_time}"
 
-        self.logger.info('New episode game starting!')
+        # self.logger.info('New episode game starting!')
         self.reset_game()
         # run game just one time for getting original observation
         '''
@@ -163,7 +163,7 @@ class HokEnv(MultiAgentEnv, NatureClient):
             except Exception as e:
                 self.logger.error(str(e))
 
-        self.logger.debug(f"Nature client start_game time cost = {time.time() - t} s")
+        # self.logger.debug(f"Nature client start_game time cost = {time.time() - t} s")
 
         '''先进行首帧处理,拿到初始状态obs,接下来通过step来获取下一步的交互动作
         '''
@@ -600,7 +600,7 @@ class HokEnv(MultiAgentEnv, NatureClient):
                 self.game_status = NC_CONFIG["game_status"]["error"]
                 self.rsp.gameover_ai_server = 1
                 self.controller.stop_game()
-                self.logger.info("Send game over request to game core")
+                # self.logger.info("Send game over request to game core")
                 
 
             # senf action cmd
@@ -644,7 +644,7 @@ class HokEnv(MultiAgentEnv, NatureClient):
                 self.rsp = StepFrameRsp()
                 # Parse step frame request from game core
                 self._parse_frame_info(self.message_proto) # 对于初始状态我只需要解析当前传过来的消息即可
-                self._print_debug_log(freq=1)
+                # self._print_debug_log(freq=1)
 
             elif self.message_name == "FightOverReq":
                 self.rsp = FightOverRsp()
@@ -681,10 +681,10 @@ class HokEnv(MultiAgentEnv, NatureClient):
             # 存储最后一帧的暴龙血量
             # 按理说应该只会出现在最后一轮
             avg_time = self.step_time_cost / self.timestep
-            self.logger.info(f"******* Game Over with status {self.game_status} *******")
-            self.logger.info("0: error, 1: win, 2: fail, 3: overtime")
-            self.logger.info(
-                f"FrameNo = [{self.frame_no}], StepNo = [{self.timestep}], avg time = [{avg_time}]")
+            # self.logger.info(f"******* Game Over with status {self.game_status} *******")
+            # self.logger.info("0: error, 1: win, 2: fail, 3: overtime")
+            # self.logger.info(
+            #     f"FrameNo = [{self.frame_no}], StepNo = [{self.timestep}], avg time = [{avg_time}]")
             
             self.controller.stop_game()
             

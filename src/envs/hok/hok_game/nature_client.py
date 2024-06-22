@@ -53,7 +53,7 @@ class NatureClient:
         endpoint = f"tcp://*:{self.battlesrv_port}"
         try:
             self.GCconn.bind(endpoint)
-            self.logger.info(f"Socket connect to gamecore: {endpoint} ... Succeed")
+            # self.logger.info(f"Socket connect to gamecore: {endpoint} ... Succeed")
             return True
         except Exception:
             self.logger.error(f"Socket connect to gamecore: {endpoint} ... Failed")
@@ -67,7 +67,7 @@ class NatureClient:
             - 重置游戏数据
             - 初始化 GameCoreController
         """
-        self.logger.info(f"Game reset ... New game id = {self.game_id}")
+        # self.logger.info(f"Game reset ... New game id = {self.game_id}")
         
         # 游戏信息重置
         self.game_over = False
@@ -96,7 +96,7 @@ class NatureClient:
         # self.GCconn.setsockopt(zmq.LINGER,0)
         self.GCconn.close()
         self.context.term()
-        self.logger.info("Socket connection closed")
+        # self.logger.info("Socket connection closed")
         print("Socket connection closed")
         # sys.exit()
 
@@ -115,7 +115,7 @@ class NatureClient:
             self.logger.error("start_game failed")
             return False
 
-        self.logger.debug(f"Nature client start_game time cost = {time.time() - t} s")
+        # self.logger.debug(f"Nature client start_game time cost = {time.time() - t} s")
         
         # 游戏主循环，直到游戏结束
         while not self.game_over: # 这是一个回合(episode)的训练，当大龙被打败的时候，self.game_over=False
@@ -132,16 +132,15 @@ class NatureClient:
 
             # 按照一定数量打印日志, 减少日志输出
             if self.timestep % 100 == 0:
-                self.logger.info(
-                    f"Game on updating: FrameNo = [{self.frame_no}], StepNo = [{self.timestep}]")
+                # self.logger.info(f"Game on updating: FrameNo = [{self.frame_no}], StepNo = [{self.timestep}]")
+                pass
 
         # 游戏结束，输出统计信息
         if self.game_over:            
             avg_time = self.step_time_cost / self.timestep
-            self.logger.info(f"******* Game Over with status {self.game_status} *******")
-            self.logger.info("0: error, 1: win, 2: fail, 3: overtime")
-            self.logger.info(
-                f"FrameNo = [{self.frame_no}], StepNo = [{self.timestep}], avg time = [{avg_time}]")
+            # self.logger.info(f"******* Game Over with status {self.game_status} *******")
+            # self.logger.info("0: error, 1: win, 2: fail, 3: overtime")
+            # self.logger.info(f"FrameNo = [{self.frame_no}], StepNo = [{self.timestep}], avg time = [{avg_time}]")
             self.controller.stop_game()
 
         return True
@@ -782,7 +781,7 @@ class NatureClient:
                 self.game_over = True
                 self.game_status = NC_CONFIG["game_status"]["error"]
                 rsp.gameover_ai_server = 1
-                self.logger.info("Send game over request to game core")
+                # self.logger.info("Send game over request to game core")
         
             # send step frame response
             rsp.cmd_list.extend(cmd_list)
@@ -880,12 +879,12 @@ class NatureClient:
 
     def _print_debug_log(self, freq):
         if self.timestep % freq == 0:
-            self.logger.debug(f"-------------------------------------------")
-            self.logger.debug(
-                f"FrameNo = [{self.frame_no}], StepNo = [{self.timestep}]")
-            self.logger.debug(f"Game Status = {self.game_status}")
-            self.logger.debug(f"Monster HP = {self.monster_hp}")
-            self.logger.debug(f"Hero HP = {self.hero_hp}")
+            # self.logger.debug(f"-------------------------------------------")
+            # self.logger.debug(f"FrameNo = [{self.frame_no}], StepNo = [{self.timestep}]")
+            # self.logger.debug(f"Game Status = {self.game_status}")
+            # self.logger.debug(f"Monster HP = {self.monster_hp}")
+            # self.logger.debug(f"Hero HP = {self.hero_hp}")
+            pass
 
     # Zmq receive request from game core
     
