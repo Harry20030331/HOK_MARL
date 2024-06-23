@@ -86,6 +86,7 @@ def evaluate_sequential(args, runner):
 
     print('=======================================================')
     print("average monster HP:"+str(np.mean(np.array(monster_hp_list))))
+    print("std monster HP:"+str(np.std(np.array(monster_hp_list))))
     print('=======================================================')
 
 def run_sequential(args, logger):
