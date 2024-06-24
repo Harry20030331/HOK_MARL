@@ -12,7 +12,7 @@
             "console": "integratedTerminal",
             "args": [
         "--evaluate=true",
-        "--checkpoint_path=old_results/models/vdn_env__2024-06-22_03-54-35/338250",
+        "--checkpoint_path=results/models/vdn_env__2024-06-22_03-54-35/338250",
         "--test_nepisode=20",
         "--config=vdn",
         "--env-config=hok",
